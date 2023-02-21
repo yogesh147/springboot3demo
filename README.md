@@ -6,7 +6,4 @@
 ### Spring Framework version: 6.0.4
 ### Spring Boot version: 3.0.2 
 ### Maven version: Apache Maven 3.8.2
-### Gradle version: 8.0
-### Groovy version: 4.0.5
-### Kotlin version: 1.8.0
 ### Apache Tomcat version: 10.1.5
