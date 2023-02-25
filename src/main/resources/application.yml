@@ -1,0 +1,8 @@
+logging:
+  level:
+    root: INFO
+    com.springboot.demo.Common: DEBUG
+
+spring:
+  main:
+    lazy-initialization: true
