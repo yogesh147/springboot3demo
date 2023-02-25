@@ -1,8 +1,10 @@
+spring:
+  profiles:
+    active: dev
+  main:
+    lazy-initialization: true
+
 logging:
   level:
     root: INFO
     com.springboot.demo.Common: DEBUG
-
-spring:
-  main:
-    lazy-initialization: true

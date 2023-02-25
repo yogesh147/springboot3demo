@@ -28,6 +28,6 @@ public class BeanFactoryDemoApplication {
         }
 
         System.out.println(data);
-        app.close();
+       // app.close();
     }
 }
