@@ -18,7 +18,7 @@ public class BeanFactoryDemoApplication {
         final ConfigurableApplicationContext app = SpringApplication.run(DemoApplication.class, args);
         final String arg = String.join(" ", args);
 
-        System.out.println(":::::::::::::::::::::::::::::: " + arg + " App Started on http://localhost:8080/ :::::::::::::::::::::::::::::::::::");
+        System.out.println(":::::::::::::::::::::::::::::: " + arg + " App Started on http://localhost:8081/ :::::::::::::::::::::::::::::::::::");
 
         String data = ApplicationBeans.name;
         if (Objects.isNull(data)) {

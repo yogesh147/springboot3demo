@@ -8,3 +8,6 @@ logging:
   level:
     root: INFO
     com.springboot.demo.Common: DEBUG
+
+server:
+  port: 8081
