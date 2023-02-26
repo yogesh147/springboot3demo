@@ -25,10 +25,10 @@ public class MethodReplacerDemoApplication {
 //		Car.breaks();
 		final Method breaks = Car.class.getMethod("breaks");
 
-		ReImplement newBreak = new ReImplement();
+		ReImplement reImplement = new ReImplement();
 		Map<String, String> map = new HashMap<>();
 		map.put("0", "Z");
-		final Object reImplementObj = newBreak.reimplement(map, breaks, new Object[]{"A"});
+		final Object reImplementObj = reImplement.reimplement(map, breaks, new Object[]{"A"});
 		Map<String, String> reImplementMap = oMapper.convertValue(reImplementObj, new TypeReference<>() {
 		});
 		log.info("reImplementMap :: {}", reImplementMap);
