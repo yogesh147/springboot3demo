@@ -22,7 +22,7 @@ public class StudentController {
                 </head>
                 <body>
                 <h1 style='color:#7abe22'>WELCOME TO SPRINGBOOT DEMO APP</h1>
-                <p><a href="http://localhost:8080/student" target="_blank">Go to Student page!</a></p>
+                <p><a href="http://localhost:8081/student" target="_blank">Go to Student page!</a></p>
                 <p>Project Id: <b>12.02.2023.16.15</b></p>
                 <p>Java version: <b>17.0.4.1 2022-08-18 LTS</b></p>
                 <p>Spring Framework version: <b>6.0.4</b></p>
