@@ -39,7 +39,7 @@ public class ApplicationBeans {
     }
 
     @PostConstruct
-    public void init() throws Exception {
+    public void init() {
         System.out.println("Bean ApplicationBeans has been instantiated and I'm the init() method");
     }
 

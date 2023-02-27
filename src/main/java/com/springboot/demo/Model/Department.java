@@ -21,4 +21,8 @@ public class Department {
     private String departmentName;
     private String departmentAddress;
     private String departmentCode;
+
+    public Department(String departmentName) {
+        this.departmentName = departmentName;
+    }
 }

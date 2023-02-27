@@ -14,7 +14,7 @@ public class ReImplement implements MethodReplacer {
     public static ObjectMapper oMapper = new ObjectMapper();
 
     @Override
-    public Object reimplement(Object obj, Method method, Object[] args) throws Throwable {
+    public Object reimplement(Object obj, Method method, Object[] args) {
         Map<String, String> map = oMapper.convertValue(obj, new TypeReference<>() {});
         map.put("1", (String) args[0]);
         return map;
