@@ -37,7 +37,7 @@ public class AOPDemoApplication {
         student.setAge(10);
         AspectJProxyFactory proxyFactory = new AspectJProxyFactory(student);
 
-        proxyFactory.addAspect(LoggingAspect.class);  //Add Aspect class to the factory
+        proxyFactory.addAspect(LoggingAspect.class);  //Add Aspect class to the factory or  Weaving at runtime
 
         Student proxyStudent = proxyFactory.getProxy();   //Get the proxy object
 
