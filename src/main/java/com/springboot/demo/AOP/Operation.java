@@ -32,4 +32,9 @@ public class Operation {
         System.out.println("Thanks for vote");
     }
 
+    @LogExecutionTime
+    public void customAdviceAnnotation() throws InterruptedException {
+        Thread.sleep(2000);
+    }
+
 }

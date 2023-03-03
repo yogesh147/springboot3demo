@@ -5,22 +5,16 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
-@Component("aspectDemo")
 @Aspect
+@Component
 public class AspectDemo {
-    @Pointcut("execution(* Operation.m1(..))")
-    public void beforeAdvice() {
-    }
 
-    @Before("beforeAdvice()")
+    @Before("execution(* Operation.m1(..))")
     public void beforeAdvice(JoinPoint jp) {
         System.out.println("beforeAdvice Method Signature : " + jp.getSignature().getName());
     }
 
-    @Pointcut("execution(* Operation.m3(..))")
-    public void afterAdvice() {
-    }
-    @After("afterAdvice()")
+    @After("execution(* Operation.m3(..))")
     public void afterAdvice(JoinPoint jp) {
         System.out.println("afterAdvice Method Signature : " + jp.getSignature().getName());
     }
@@ -33,24 +27,31 @@ public class AspectDemo {
         System.out.println("end of after returning advice...");
     }
 
-    @Pointcut("execution(* Operation.m4(..))")
-    public void AroundAdvice(){}
-
-    @Around("AroundAdvice()")
-    public Object AroundAdvice(ProceedingJoinPoint pjp) throws Throwable
-    {
+    @Around("execution(* Operation.m4(..))")
+    public Object AroundAdvice(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("Additional Concern Before calling actual method :: " + pjp.getSignature().getName());
-        Object obj=pjp.proceed();
+        Object obj = pjp.proceed();
         System.out.println("Additional Concern After calling actual method :: " + pjp.getSignature().getName());
         return obj;
     }
 
-    @AfterThrowing(pointcut = "execution(* Operation.m5(..))",throwing= "error")
-    public void afterThrowing(JoinPoint jp,Throwable error)
-    {
+    @AfterThrowing(pointcut = "execution(* Operation.m5(..))", throwing = "error")
+    public void afterThrowing(JoinPoint jp, Throwable error) {
         System.out.println("additional concern");
-        System.out.println("Method Signature: "  + jp.getSignature().getName());
-        System.out.println("Exception is: "+error);
+        System.out.println("Method Signature: " + jp.getSignature().getName());
+        System.out.println("Exception is: " + error);
         System.out.println("end of after throwing advice...");
     }
+
+    @Around("@annotation(LogExecutionTime)")
+    public Object calculateExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
+
+        long start = System.currentTimeMillis();
+        Object proceed = joinPoint.proceed();
+        long executionTime = System.currentTimeMillis() - start;
+
+        System.out.println(joinPoint.getSignature() + " executed in " + executionTime + "ms");
+        return proceed;
+    }
+
 }

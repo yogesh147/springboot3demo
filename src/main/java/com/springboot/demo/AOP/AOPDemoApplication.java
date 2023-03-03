@@ -10,7 +10,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 @Slf4j
 public class AOPDemoApplication {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         final ConfigurableApplicationContext applicationContext = SpringApplication.run(AOPDemoApplication.class, args);
         System.out.println(":::::::::::::::::::::::::::::: AOP Demo App Started on http://localhost:8081/ :::::::::::::::::::::::::::::::::::");
 
@@ -28,6 +28,8 @@ public class AOPDemoApplication {
             e.m5(10);
         } catch (Exception ignored) {
         }
+        log.info("customAdviceAnnotation Called");
+        e.customAdviceAnnotation();
     }
 
 }
