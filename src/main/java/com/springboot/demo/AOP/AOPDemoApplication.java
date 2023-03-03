@@ -1,6 +1,7 @@
 package com.springboot.demo.AOP;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.aop.aspectj.annotation.AspectJProxyFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration;
@@ -30,6 +31,17 @@ public class AOPDemoApplication {
         }
         log.info("customAdviceAnnotation Called");
         e.customAdviceAnnotation();
+
+        System.out.println(":::::::::::::::::::::::::::::: AOP Proxy Demo :::::::::::::::::::::::::::::::::::");
+        Student student = (Student) applicationContext.getBean("student");
+        student.setAge(10);
+        AspectJProxyFactory proxyFactory = new AspectJProxyFactory(student);
+
+        proxyFactory.addAspect(LoggingAspect.class);  //Add Aspect class to the factory
+
+        Student proxyStudent = proxyFactory.getProxy();   //Get the proxy object
+
+        System.out.println("Age :: " + proxyStudent.getAge());   //Invoke the proxied method.
     }
 
 }
