@@ -39,7 +39,7 @@ public class AOPDemoApplication {
 
         proxyFactory.addAspect(LoggingAspect.class);  //Add Aspect class to the factory or  Weaving at runtime
 
-        Student proxyStudent = proxyFactory.getProxy();   //Get the proxy object
+        Student proxyStudent = proxyFactory.getProxy();   //Get the proxy object or proxyStudent is a target object
 
         System.out.println("Age :: " + proxyStudent.getAge());   //Invoke the proxied method.
     }
