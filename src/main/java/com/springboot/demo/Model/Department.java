@@ -17,10 +17,10 @@ import lombok.NoArgsConstructor;
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long departmentId;
-    private String departmentName;
-    private String departmentAddress;
-    private String departmentCode;
+    public Long departmentId;
+    public String departmentName;
+    public String departmentAddress;
+    public String departmentCode;
 
     public Department(String departmentName) {
         this.departmentName = departmentName;
