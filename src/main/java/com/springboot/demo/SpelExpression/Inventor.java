@@ -14,7 +14,7 @@ public class Inventor {
     public String nationality;
 
     public String getNameAndNationality() {
-        return name + "" + nationality;
+        return name + "<->" + nationality;
     }
 
 }
