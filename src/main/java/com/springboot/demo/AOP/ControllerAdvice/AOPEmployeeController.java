@@ -10,11 +10,11 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1")
-public class EmployeeController {
+public class AOPEmployeeController {
     @Autowired
     private final EmployeeService employeeService;
 
-    public EmployeeController(EmployeeService employeeService) {
+    public AOPEmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
 

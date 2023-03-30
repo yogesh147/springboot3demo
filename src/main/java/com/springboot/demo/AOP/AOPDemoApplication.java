@@ -33,7 +33,7 @@ public class AOPDemoApplication {
         e.customAdviceAnnotation();
 
         System.out.println(":::::::::::::::::::::::::::::: AOP Proxy Demo :::::::::::::::::::::::::::::::::::");
-        Student student = (Student) applicationContext.getBean("student");
+        Student student = (Student) applicationContext.getBean("AOPStudent");
         student.setAge(10);
         AspectJProxyFactory proxyFactory = new AspectJProxyFactory(student);
 
