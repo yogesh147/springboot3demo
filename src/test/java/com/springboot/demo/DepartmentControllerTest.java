@@ -91,7 +91,7 @@ class DepartmentControllerTest {
     }
 
     @Test
-    @Tag("UnitTest")
+    @Tag("current")
     @DisplayName("TestJava8features")
     @Order(5)
     public void testJava8features() {
