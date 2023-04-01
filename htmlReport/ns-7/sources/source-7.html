@@ -1,0 +1,117 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > PropertyAccessorFactoryExample</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.springboot.demo.BeanWrapper</a>
+</div>
+
+<h1>Coverage Summary for Class: PropertyAccessorFactoryExample (com.springboot.demo.BeanWrapper)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PropertyAccessorFactoryExample</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/5)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.springboot.demo.BeanWrapper;
+&nbsp;
+&nbsp;import org.springframework.beans.BeanWrapper;
+&nbsp;import org.springframework.beans.PropertyAccessorFactory;
+&nbsp;
+<b class="nc">&nbsp;public class PropertyAccessorFactoryExample {</b>
+&nbsp;
+&nbsp;    public static void main (String[] args) {
+<b class="nc">&nbsp;        BeanWrapper bw = PropertyAccessorFactory.forBeanPropertyAccess(new Person());</b>
+<b class="nc">&nbsp;        bw.setPropertyValue(&quot;name&quot;, &quot;Raj&quot;);</b>
+<b class="nc">&nbsp;        bw.setPropertyValue(&quot;age&quot;, &quot;26&quot;);</b>
+<b class="nc">&nbsp;        System.out.println(bw.getWrappedInstance());</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-04-01 12:29</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > AOPDemoApplication</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.springboot.demo.AOP</a>
+</div>
+
+<h1>Coverage Summary for Class: AOPDemoApplication (com.springboot.demo.AOP)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AOPDemoApplication</td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (2/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    7.7%
+  </span>
+  <span class="absValue">
+    (2/26)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">AOPDemoApplication$$SpringCGLIB$$0</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (2/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    7.7%
+  </span>
+  <span class="absValue">
+    (2/26)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.springboot.demo.AOP;
+&nbsp;
+&nbsp;import lombok.extern.slf4j.Slf4j;
+&nbsp;import org.springframework.aop.aspectj.annotation.AspectJProxyFactory;
+&nbsp;import org.springframework.boot.SpringApplication;
+&nbsp;import org.springframework.boot.autoconfigure.SpringBootApplication;
+&nbsp;import org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration;
+&nbsp;import org.springframework.context.ConfigurableApplicationContext;
+&nbsp;
+&nbsp;@SpringBootApplication(exclude = SqlInitializationAutoConfiguration.class)
+<b class="fc">&nbsp;@Slf4j</b>
+<b class="fc">&nbsp;public class AOPDemoApplication {</b>
+&nbsp;
+&nbsp;    public static void main(String[] args) throws InterruptedException {
+<b class="nc">&nbsp;        final ConfigurableApplicationContext applicationContext = SpringApplication.run(AOPDemoApplication.class, args);</b>
+<b class="nc">&nbsp;        System.out.println(&quot;:::::::::::::::::::::::::::::: AOP Demo App Started on http://localhost:8081/ :::::::::::::::::::::::::::::::::::&quot;);</b>
+&nbsp;
+<b class="nc">&nbsp;        Operation e = (Operation) applicationContext.getBean(&quot;operation&quot;);</b>
+<b class="nc">&nbsp;        log.info(&quot;m1 Called&quot;);</b>
+<b class="nc">&nbsp;        e.m1();</b>
+<b class="nc">&nbsp;        log.info(&quot;m2 Called&quot;);</b>
+<b class="nc">&nbsp;        e.m2();</b>
+<b class="nc">&nbsp;        log.info(&quot;m3 Called&quot;);</b>
+<b class="nc">&nbsp;        e.m3();</b>
+<b class="nc">&nbsp;        log.info(&quot;m4 Called&quot;);</b>
+<b class="nc">&nbsp;        e.m4();</b>
+<b class="nc">&nbsp;        log.info(&quot;m5 Called&quot;);</b>
+&nbsp;        try {
+<b class="nc">&nbsp;            e.m5(10);</b>
+<b class="nc">&nbsp;        } catch (Exception ignored) {</b>
+<b class="nc">&nbsp;        }</b>
+<b class="nc">&nbsp;        log.info(&quot;customAdviceAnnotation Called&quot;);</b>
+<b class="nc">&nbsp;        e.customAdviceAnnotation();</b>
+&nbsp;
+<b class="nc">&nbsp;        System.out.println(&quot;:::::::::::::::::::::::::::::: AOP Proxy Demo :::::::::::::::::::::::::::::::::::&quot;);</b>
+<b class="nc">&nbsp;        Student student = (Student) applicationContext.getBean(&quot;AOPStudent&quot;);</b>
+<b class="nc">&nbsp;        student.setAge(10);</b>
+<b class="nc">&nbsp;        AspectJProxyFactory proxyFactory = new AspectJProxyFactory(student);</b>
+&nbsp;
+<b class="nc">&nbsp;        proxyFactory.addAspect(LoggingAspect.class);  //Add Aspect class to the factory or  Weaving at runtime</b>
+&nbsp;
+<b class="nc">&nbsp;        Student proxyStudent = proxyFactory.getProxy();   //Get the proxy object or proxyStudent is a target object</b>
+&nbsp;
+<b class="nc">&nbsp;        System.out.println(&quot;Age :: &quot; + proxyStudent.getAge());   //Invoke the proxied method.</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-04-01 12:29</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > BeanWrapperPropertyValueExample</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.springboot.demo.BeanWrapper</a>
+</div>
+
+<h1>Coverage Summary for Class: BeanWrapperPropertyValueExample (com.springboot.demo.BeanWrapper)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">BeanWrapperPropertyValueExample</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/8)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.springboot.demo.BeanWrapper;
+&nbsp;
+&nbsp;import org.springframework.beans.BeanWrapper;
+&nbsp;import org.springframework.beans.BeanWrapperImpl;
+&nbsp;import org.springframework.beans.PropertyValue;
+&nbsp;
+<b class="nc">&nbsp;public class BeanWrapperPropertyValueExample {</b>
+&nbsp;    public static void main (String[] args) {
+<b class="nc">&nbsp;        BeanWrapper beanWrapper = new BeanWrapperImpl(new Person());</b>
+<b class="nc">&nbsp;        PropertyValue pv = new PropertyValue(&quot;name&quot;, &quot;John&quot;);</b>
+<b class="nc">&nbsp;        beanWrapper.setPropertyValue(&quot;name&quot;, &quot;John&quot;);</b>
+<b class="nc">&nbsp;        PropertyValue pv2 = new PropertyValue(&quot;age&quot;, 33);</b>
+<b class="nc">&nbsp;        beanWrapper.setPropertyValue(pv);</b>
+<b class="nc">&nbsp;        beanWrapper.setPropertyValue(pv2);</b>
+<b class="nc">&nbsp;        System.out.println(&quot;bean: &quot;+beanWrapper.getWrappedInstance());</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-04-01 12:29</div>
+</div>
+</body>
+</html>

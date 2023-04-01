@@ -4,13 +4,11 @@ import com.springboot.demo.Common.ApplicationBeans;
 import com.springboot.demo.Common.SpringContainer;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.Objects;
 
-@SpringBootApplication(exclude = SqlInitializationAutoConfiguration.class)
+//@SpringBootApplication(exclude = SqlInitializationAutoConfiguration.class)
 public class BeanFactoryDemoApplication {
 
     public static void main(String[] args) {

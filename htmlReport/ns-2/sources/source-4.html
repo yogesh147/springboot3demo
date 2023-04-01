@@ -1,0 +1,153 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Operation</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.springboot.demo.AOP</a>
+</div>
+
+<h1>Coverage Summary for Class: Operation (com.springboot.demo.AOP)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Operation</td>
+<td class="coverageStat">
+  <span class="percent">
+    14.3%
+  </span>
+  <span class="absValue">
+    (1/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    7.1%
+  </span>
+  <span class="absValue">
+    (1/14)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">Operation$$SpringCGLIB$$0</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    14.3%
+  </span>
+  <span class="absValue">
+    (1/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    7.1%
+  </span>
+  <span class="absValue">
+    (1/14)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.springboot.demo.AOP;
+&nbsp;
+&nbsp;import org.springframework.stereotype.Component;
+&nbsp;
+&nbsp;@Component(&quot;operation&quot;)
+<b class="fc">&nbsp;public class Operation {</b>
+&nbsp;
+&nbsp;    public void m1() {
+<b class="nc">&nbsp;        System.out.println(&quot;m1 method invoked&quot;);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public int m2() {
+<b class="nc">&nbsp;        System.out.println(&quot;m2 method invoked&quot;);</b>
+<b class="nc">&nbsp;        int a = 1;</b>
+<b class="nc">&nbsp;        int b = 2;</b>
+<b class="nc">&nbsp;        System.out.println(&quot;m2 method invoked with b&quot; + b);</b>
+<b class="nc">&nbsp;        return a + b;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public int m3() {
+<b class="nc">&nbsp;        System.out.println(&quot;m3 method invoked&quot;);</b>
+<b class="nc">&nbsp;        return 3;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public int m4() {
+<b class="nc">&nbsp;        System.out.println(&quot;m4 method invoked&quot;);</b>
+<b class="nc">&nbsp;        return 4;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void m5(int age) {
+<b class="nc">&nbsp;        if (age &lt; 18) throw new ArithmeticException(&quot;Not valid age&quot;);</b>
+<b class="nc">&nbsp;        System.out.println(&quot;Thanks for vote&quot;);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @LogExecutionTime
+&nbsp;    public void customAdviceAnnotation() throws InterruptedException {
+<b class="nc">&nbsp;        Thread.sleep(2000);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-04-01 12:29</div>
+</div>
+</body>
+</html>
