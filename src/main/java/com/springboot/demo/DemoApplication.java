@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConf
 
 @SpringBootApplication(exclude = SqlInitializationAutoConfiguration.class)
 public class DemoApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 		System.out.println(":::::::::::::::::::::::::::::: Demo App Started on http://localhost:8080/ :::::::::::::::::::::::::::::::::::");

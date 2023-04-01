@@ -9,4 +9,8 @@
 ### Kotlin version: 1.8.0
 ### Apache Tomcat version: 10.1.5
 
+### for closing 8080 port
+### netstat -ano | findstr :8080
+### taskkill /PID 13992 /F
+
 
